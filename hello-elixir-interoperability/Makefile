@@ -85,7 +85,7 @@ COMPILE_CPP = $(cpp_verbose) $(CXX) $(CXXFLAGS) $(CPPFLAGS) -c
 all: $(C_SRC_OUTPUT_PORT_DRV)
 
 $(C_SRC_OUTPUT_PORT_DRV): $(OBJECTS_PORT_DRV)
-	@mkdir -p $(BASEDIR)/priv/
+	@mkdir -p $(CURDIR)/priv
 	$(link_verbose) $(CC) $(OBJECTS_PORT_DRV) $(LDFLAGS) $(LDLIBS) -o $(C_SRC_OUTPUT_PORT_DRV)
 
 %.o: %.c
