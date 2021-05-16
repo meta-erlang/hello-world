@@ -1,0 +1,40 @@
+{application, hello_http_server, [
+    {description, "Hello HTTP Server"},
+    {vsn, "0.1.0"},
+    {registered, [hhs_sup, hhs_user_server]},
+    {mod, {hhs_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        sasl,
+        nitrogen_core,
+        nprocreg,
+        simple_bridge,
+        simple_cache,
+        erlpass,
+        mnesia
+    ]},
+    {env, []},
+    {modules, [
+        hhs_sup,
+        hhs_app,
+        hhs_user_server,
+        hhs_common,
+        hhs_login,
+        hhs_system,
+        hhs_logout,
+        hhs_security_handler,
+        hhs_config_handler,
+        element_i,
+        hhs_hoverable_dropdown,
+        hhs_account,
+        web_404,
+        hhs_index,
+        hhs_main,
+        hhs_register,
+        nitrogen_main_handler
+    ]},
+
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.
