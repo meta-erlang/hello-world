@@ -1,21 +1,6 @@
-# HelloElixirRustler
+hello-elixir-rustler
+=====
 
-**TODO: Add description**
+This code is just the generated code from `mix new` and `mix rustler.new`. See the [rustler documentation](https://hexdocs.pm/rustler/readme.html) for more information.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `hello_elixir_rustler` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:hello_elixir_rustler, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/hello_elixir_rustler](https://hexdocs.pm/hello_elixir_rustler).
-
+`mix test` actually calls into the nif to perform a simple addition. This ensures that everything is built and loaded correctly.
