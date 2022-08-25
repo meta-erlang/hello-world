@@ -7,7 +7,20 @@ defmodule HelloElixirRustler.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      releases: [
+        hello_elixir_rustler: [
+          applications: [
+            hello_elixir_rustler: :permanent
+          ],
+          steps: [
+            :assemble,
+            :tar
+          ],
+          # MIX_TARGET_INCLUDE_ERTS is set by meta-erlang/classes/mix.bbclass
+          include_erts: System.get_env("MIX_TARGET_INCLUDE_ERTS") || false
+        ]
+      ]
     ]
   end
 
