@@ -1,5 +1,5 @@
 hello-erlang-* linguist-language=Erlang
-hell0-elixir-* linguist-language=Elixir
+hello-elixir-* linguist-language=Elixir
 hello-http-server linguist-language=Erlang
 hello-phoenix linguist-language=Elixir
 hello-rabbitmq linguist-language=Erlang
