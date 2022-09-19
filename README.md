@@ -15,6 +15,6 @@ Summary of examples:
 * Elixir
   * [hello-phoenix](hello-phoenix): A minimal phoenix server. [hello-phoenix_0.1.0.bb](https://github.com/meta-erlang/meta-erlang/tree/master/recipes-examples/hello-phoenix/hello-phoenix_0.1.0.bb)
   * [hello-elixir-interoperability](hello-elixir-interoperability): A minimal Elixir application with Erlang NIF written in C. [hello-elixir-interoperability_0.1.0.bb](https://github.com/meta-erlang/meta-erlang/tree/master/recipes-examples/hello-elixir-interoperability/hello-elixir-interoperability_0.1.0.bb)
-  * [hello-elixir-rustler](hello-elixir-rustler): A [rustler](https://github.com/rusterlium/rustler) getting started application. 
+  * [hello-elixir-rustler](hello-elixir-rustler): A [rustler](https://github.com/rusterlium/rustler) getting started application. [hello-elixir-rustler_0.1.0.bb](https://github.com/meta-erlang/meta-erlang/tree/master/recipes-examples/hello-elixir-rustler/hello-elixir-rustler_0.1.0.bb)
 
-For more resources about meta-erlang, check out the [meta-erlang documentation](https://meta-erlang.github.io/#/). [hello-elixir-rustler_0.1.0.bb](https://github.com/meta-erlang/meta-erlang/tree/master/recipes-examples/hello-elixir-rustler/hello-elixir-rustler_0.1.0.bb)
+For more resources about meta-erlang, check out the [meta-erlang documentation](https://meta-erlang.github.io/#/).
