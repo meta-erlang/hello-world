@@ -1,13 +1,9 @@
-# HelloPhoenix
-
-This code is pretty much the same as any other Phoenix getting started examples. The
-difference is just a release definition done in _mix.exs_ file.
+# Hello
 
 To start your Phoenix server:
 
-  * Install dependencies with `mix deps.get`
-  * Install Node.js dependencies with `npm install` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
+  * Run `mix setup` to install and setup dependencies
+  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
