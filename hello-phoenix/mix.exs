@@ -13,7 +13,7 @@ defmodule Hello.MixProject do
       releases: [
         hello_phoenix: [
           applications: [
-            hello_phoenix: :permanent
+            hello: :permanent
           ],
           steps: [
             :assemble,
