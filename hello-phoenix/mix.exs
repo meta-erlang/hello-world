@@ -9,7 +9,20 @@ defmodule Hello.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      releases: [
+        hello_phoenix: [
+          applications: [
+            hello_phoenix: :permanent
+          ],
+          steps: [
+            :assemble,
+            :tar
+          ],
+          # MIX_TARGET_INCLUDE_ERTS is set by meta-erlang/classes/mix.bbclass
+          include_erts: System.get_env("MIX_TARGET_INCLUDE_ERTS")
+        ]
+      ]
     ]
   end
 
