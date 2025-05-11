@@ -1,0 +1,9 @@
+{application, hello,
+ [{description, "The hello application"},
+  {vsn, "&VSN&"},
+  {mod, {hello_app,[]}},
+  {modules, ['hello_app', 'hello_sup', 'hello']},
+  {registered, []},
+  {applications, [kernel, stdlib]},
+  {env, []}
+ ]}.

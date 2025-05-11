@@ -1,0 +1,86 @@
+#!/bin/sh
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+DAEMON=/usr/bin/hello.start
+STOP=/usr/bin/hello.stop
+NAME="helloworld"
+DESC="Erlang Application HelloWorld"
+OPTS=""
+
+running()
+{
+    pgrep -f -d ' ' $NAME > /dev/null 2>&1
+}
+
+case "$1" in
+  start)
+    if running
+    then
+      echo "$DESC already started"
+    else
+      echo -n "Starting $DESC: "
+      start-stop-daemon --start -x "$DAEMON" -- $OPTS
+      if [ $? -eq 0 ]
+      then
+        echo "$NAME started"
+      else
+        echo "$NAME failed"
+      fi
+    fi
+    ;;
+  stop)
+    if running
+    then
+      echo -n "Stopping $DESC: "
+      $STOP
+      echo "$NAME stopped"
+    else
+      echo "$DESC already stopped"
+    fi
+    ;;
+  reload|force-reload)
+    echo -n "Reloading $DESC: "
+    $STOP
+    start-stop-daemon --start -x "$DAEMON" -- $OPTS
+    if [ $? -eq 0 ]
+    then
+      echo "$NAME started"
+    else
+      echo "$NAME failed"
+    fi
+    ;;
+  restart)
+    echo -n "Restarting $DESC: "
+    $STOP
+    start-stop-daemon --start -x "$DAEMON" -- $OPTS
+    if [ $? -eq 0 ]
+    then
+      echo "$NAME started"
+    else
+      echo "$NAME failed"
+    fi
+    ;;
+  reload-or-restart)
+    if running
+    then
+        $0 reload
+    else
+        $0 start
+    fi
+    ;;
+  status)
+    running /dev/null 2>&1
+    RETVAL=$?
+    if [ $RETVAL -eq 0 ]
+    then
+      echo "$DESC started"
+    else
+      echo "$DESC stopped"
+    fi
+    ;;
+  *)
+    echo -n "Usage: /etc/init.d/otp.system {start|stop|reload|restart|"
+    echo "force-reload|reload-or-restart|status}"
+    exit 1
+esac
+
+exit 0

@@ -1,0 +1,10 @@
+*~
+aclocal.m4
+autom4te.cache
+config.*
+install-sh
+missing
+Makefile.in
+Makefile
+configure
+HELLO_VSN
