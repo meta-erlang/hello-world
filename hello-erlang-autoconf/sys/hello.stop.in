@@ -3,7 +3,8 @@
 #
 PIPE_DIR=/tmp/stop/
 ERLANG_LOGDIR=/tmp/stop
-BINDIR=/usr/lib/erlang/erts-@ERLANG_ERTS_VER@/bin
+ROOTDIR=/usr/lib/erlang
+BINDIR=$ROOTDIR/bin
 HELLO_NODE=hello@`hostname`
 
 mkdir -p $ERLANG_LOGDIR

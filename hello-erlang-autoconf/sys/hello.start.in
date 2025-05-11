@@ -4,7 +4,7 @@
 PIPE_DIR=/tmp/start/
 ERLANG_LOGDIR=/tmp/start
 ROOTDIR=/usr/lib/erlang
-BINDIR=$ROOTDIR/erts-@ERLANG_ERTS_VER@/bin
+BINDIR=$ROOTDIR/bin
 
 mkdir -p $ERLANG_LOGDIR
 
