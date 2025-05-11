@@ -15,5 +15,5 @@ CLEANFILES = $(app_sysconf_DATA)
 DISTCLEANFILES = $(CLEANFILES)
 
 .rel.boot:
-	$(AM_V_ERL)$(ERL) -noshell -pa $(top_srcdir)/src\
+	$(AM_V_ERL)$(ERL) -noshell -pa $(top_builddir)/src\
 	 -s systools make_script $* 'no_warn_sasl' -s erlang halt

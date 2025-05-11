@@ -22,11 +22,10 @@ dnl ----------------------------------------------------------------------
 dnl Set version
 dnl ----------------------------------------------------------------------
 
-HELLO_VSN=`git describe --tags --always 2>/dev/null`
-if test "$HELLO_VSN" = "";
-  then HELLO_VSN=`cat $srcdir/HELLO_VSN`
-  else echo $HELLO_VSN>$srcdir/HELLO_VSN
-fi
+HELLO_VSN=`cd $srcdir; git describe --tags --always 2>/dev/null`
+AS_IF([test "x$HELLO_VSN" = x], [HELLO_VSN=`cat $srcdir/HELLO_VSN`],
+      [echo $HELLO_VSN>$srcdir/HELLO_VSN])
+
 AC_SUBST(HELLO_VSN)
 
 AC_CONFIG_FILES([Makefile
