@@ -1,7 +1,0 @@
-# This is a simple hello world application used for demonstrating how erlang
-# can be used with the Yocto project
-
-autoreconf -f -i
-./configure
-make
-sudo make install
