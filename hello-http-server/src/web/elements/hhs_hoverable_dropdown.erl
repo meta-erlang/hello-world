@@ -4,7 +4,7 @@
 
 reflect() -> record_info(fields, hhs_hoverable_dropdown).
 
-render_element(#hhs_hoverable_dropdown{rowId = Id} = Record) -> 
+render_element(#hhs_hoverable_dropdown{rowId = Id} = _Record) -> 
 
     DropdownButton = #button{class=dropbtn, body=#p{class="ri-more-2-fill ri-sm"}},
 
